@@ -16,6 +16,8 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find_by(params[:id])
+    @comment=Comment.new
+    @comment.article_id=@article.id
   end
 
   def edit
